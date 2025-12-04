@@ -1,98 +1,137 @@
-/* Reset básico e tipografia */
+/* Paleta de Cores: 
+   - Primária (Azul): #007bff
+   - Destaque (Verde/Científico): #28a745
+   - Fundo Claro: #f7f9fc
+   - Fundo Escuro: #0056b3 (Para cards iônicos)
+   - Laranja/Alerta (Para tags): #ff8c00 
+*/
+
+/* Reset e Tipografia (Usando Poppins) */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5; /* Fundo cinza suave */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc; 
     color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
-/* Estrutura principal do conteúdo */
+/* Estrutura Principal */
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px; /* Aumentado para melhor visualização */
     margin: 40px auto;
     background-color: #ffffff;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px 40px;
-    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra mais profunda */
+    padding: 40px;
+    border-radius: 15px;
 }
 
 /* Cabeçalho */
 header {
     text-align: center;
-    padding-bottom: 25px;
-    border-bottom: 4px solid #007bff; /* Linha de destaque azul */
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 5px solid #007bff; /* Linha de destaque grossa */
+    margin-bottom: 40px;
 }
 
 header h1 {
     color: #007bff;
-    font-size: 2.8em;
-    margin-bottom: 8px;
+    font-size: 3.2em;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 header p {
     color: #6c757d;
     font-style: italic;
+    font-size: 1.1em;
 }
 
-/* Seções de conteúdo */
+/* Seções de Conteúdo */
 section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #e9f6ff; /* Fundo levemente azulado para seções */
-    border-left: 6px solid #28a745; /* Linha lateral verde */
-    border-radius: 8px;
+    margin-bottom: 50px;
 }
 
 section h2 {
     color: #28a745; 
-    font-size: 1.8em;
-    margin-top: 0;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #cce5ff;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 5px solid #28a745;
 }
 
-/* Estilo para os tipos de ligação (cards) */
+/* Box de Destaque para Definições e Porquês */
+.highlight-box {
+    background-color: #e6f7ff; /* Fundo azul muito suave */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.1);
+}
+
+/* Layout dos Cards de Ligação (Grid) */
+.bond-grid {
+    display: flex;
+    gap: 25px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Para responsividade */
+    justify-content: center;
+}
+
 .bond-type {
-    margin-top: 20px;
-    padding: 18px;
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1; /* Permite que os cards se expandam */
+    min-width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
+    color: white; /* Texto claro para fundos escuros */
 }
 
-/* Efeito de hover (mouse sobre o card) */
+/* Efeito de hover */
 .bond-type:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.02); /* Levanta e cresce levemente */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .bond-type strong {
-    color: #dc3545; /* Nome da ligação em vermelho de destaque */
-    font-size: 1.2em;
+    font-size: 1.5em;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
-/* Lista de Termos Chave */
-#termos-chave ul {
-    list-style-type: none;
-    padding: 0;
+.bond-type p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Estilos Específicos para Cada Card */
+.ionic-card {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradiente Azul */
+}
+.covalent-card {
+    background: linear-gradient(135deg, #28a745, #1e7e34); /* Gradiente Verde */
+}
+.metallic-card {
+    background: linear-gradient(135deg, #dc3545, #b82d33); /* Gradiente Vermelho */
+}
+
+/* Tags de Palavras-Chave */
+.tag-list {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 
-#termos-chave li {
-    background-color: #ffc107; /* Amarelo de atenção */
-    color: #333;
+.tag-list span {
+    background-color: #ff8c00; /* Laranja Vívido */
+    color: white;
     padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: bold;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(255, 140, 0, 0.4);
 }
