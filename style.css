@@ -1,0 +1,98 @@
+/* Reset básico e tipografia */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Fundo cinza suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Estrutura principal do conteúdo */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    border-radius: 12px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 4px solid #007bff; /* Linha de destaque azul */
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #007bff;
+    font-size: 2.8em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Seções de conteúdo */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #e9f6ff; /* Fundo levemente azulado para seções */
+    border-left: 6px solid #28a745; /* Linha lateral verde */
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #28a745; 
+    font-size: 1.8em;
+    margin-top: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cce5ff;
+}
+
+/* Estilo para os tipos de ligação (cards) */
+.bond-type {
+    margin-top: 20px;
+    padding: 18px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito de hover (mouse sobre o card) */
+.bond-type:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bond-type strong {
+    color: #dc3545; /* Nome da ligação em vermelho de destaque */
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Lista de Termos Chave */
+#termos-chave ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#termos-chave li {
+    background-color: #ffc107; /* Amarelo de atenção */
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
